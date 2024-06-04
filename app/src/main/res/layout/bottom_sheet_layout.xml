@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/botton_sheet"
+    android:background="@drawable/bottom_sheet_bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order now"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/purple_500"
+        android:fontFamily="@font/amitaregular"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:background="@color/purple_500"/>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="10dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+
+                android:id="@+id/bottomImg"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:src="@drawable/coffe"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp">
+
+                <TextView
+                    android:id="@+id/bottom_detailed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bottom_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/amitaregular"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/start"
+                        android:layout_marginTop="2dp" />
+
+                    <TextView
+                        android:id="@+id/bottom_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.0" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_baseline_access_time_24"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="30dp" />
+
+                    <TextView
+                        android:id="@+id/bottom_timing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 - 7:00"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="4dp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_dollar"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/dollarsymbol"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/purple_500"/>
+
+                    <TextView
+                        android:id="@+id/bottom_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120.0"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/img_dollar"
+                        android:layout_marginLeft="4dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/add_to_cart"
+                        android:layout_width="97dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Add To Cart"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textAllCaps="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
